@@ -36,7 +36,7 @@ angular.module('ngJsonExplorer', [])
 			var parseRaw = function (k, v) {
 				var key = '';
 				if (k) {
-					key = '<span class="prop>">' + k + '</span>: ';
+					key = '<span class="prop">' + k + '</span>: ';
 				}
 				if (typeof v == 'string') {
 					return key + '<span class="string">"' + v + '"</span>';
@@ -50,9 +50,9 @@ angular.module('ngJsonExplorer', [])
 				return key + '<span class="null">' + v + '</span>';
 			};
 			var parseArray = function (k, v) {
-				var html = '<span class="prop>"><a href="#" class="collapser">' + collapser + '</a></span> [';
+				var html = '<span class="prop"><a href="#" class="collapser">' + collapser + '</a></span> [';
 				if (k) {
-					html = '<span class="prop>"><a href="#" class="collapser">' + collapser + '</a>' + k + '</span>: [';
+					html = '<span class="prop"><a href="#" class="collapser">' + collapser + '</a>' + k + '</span>: [';
 				}
 				html += '<span class="ellipsis ' + ellipsis + '">...</span>';
 				html += '<ul class="array collapsible ' + contents + '">';
@@ -71,9 +71,9 @@ angular.module('ngJsonExplorer', [])
 				return html;
 			};
 			var parseObject = function (k, v) {
-				var html = '<span class="prop>"><a href="#" class="collapser">' + collapser + '</a></span> {';
+				var html = '<span class="prop"><a href="#" class="collapser">' + collapser + '</a></span> {';
 				if (k) {
-					html = '<span class="prop>"><a href="#" class="collapser">' + collapser + '</a>' + k + '</span>: {';
+					html = '<span class="prop"><a href="#" class="collapser">' + collapser + '</a>' + k + '</span>: {';
 				}
 				html += '<span class="ellipsis ' + ellipsis + '">...</span>';
 				html += '<ul class="object collapsible ' + contents + '">';
